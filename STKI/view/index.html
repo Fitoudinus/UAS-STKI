@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cari</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #0046d2, #ffffff);
+            color: #333;
+        }
+
+        header {
+            background-color: #d200008b;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .description {
+            text-align: center;
+            color: #ffffff;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .search-container {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.584);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #d20000;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #d20000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #a10000;
+        }
+
+        footer {
+            background-color: #d200008b;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Cari Pahlawan</h1>
+    </header>
+
+    <br>
+
+    <div class="description">Mesin Pencari Nama Pahlawan Indonesia</div>
+
+    <div class="search-container">
+        <form action="/search" method="get">
+            <label for="keyword">Kata kunci: </label>
+            <input type="text" id="keyword" name="keyword" placeholder="Cari...">
+            <input type="submit" value="Cari">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; Rizki Rafi Fidityo | Search Engine Nama Pahlawan</p>
+    </footer>
+
+</body>
+</html>

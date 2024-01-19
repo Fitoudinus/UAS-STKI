@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: linear-gradient(to right, #d20000, #ffffff);
+            color: #000000;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        i {
+            font-style: normal;
+            color: #d20000;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: rgba(255, 255, 255, 0.764);
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .back-button {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-button a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d20000;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hasil pencarian untuk: <i>{{ search_query }}</i></h1>
+
+    {% if search_results %}
+        <ol>
+            {% for result in search_results %}
+                <li>{{ result }}</li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>Maaf, tidak ada pahlawan yang relevan</p>
+    {% endif %}
+
+    <div class="back-button">
+        <a href="/">Kembali ke Pencarian</a>
+    </div>
+
+</body>
+</html>
